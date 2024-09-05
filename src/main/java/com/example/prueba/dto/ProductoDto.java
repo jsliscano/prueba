@@ -10,7 +10,6 @@ import java.math.BigDecimal;
 @Getter
 public class ProductoDto {
 
-
         private TipoCuenta tipoCuenta;
         private BigDecimal saldo;
         private Boolean exentaGMF;
