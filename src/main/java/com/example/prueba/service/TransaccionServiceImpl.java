@@ -84,6 +84,4 @@ public class TransaccionServiceImpl implements TransaccionService {
         // Retornar un mensaje de éxito
         return "Transferencia exitosa";
     }
-
-
 }

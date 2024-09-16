@@ -19,7 +19,6 @@ public class TransaccionEntity {
 
     private String tipo; // "Consignación", "Retiro", "Transferencia"
 
-
     private BigDecimal monto;
 
     @Column(name = "fecha_transaccion")

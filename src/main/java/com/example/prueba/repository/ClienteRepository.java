@@ -9,8 +9,6 @@ import java.util.Optional;
 public interface ClienteRepository extends JpaRepository <ClienteEntity,Long> {
 
     Optional<ClienteEntity> findByNombre(String nombre);
-
-
 }
 
 

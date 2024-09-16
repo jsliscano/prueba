@@ -27,14 +27,12 @@ public class ProductoEntity {
     @Column(name = "tipo_cuenta")
     private TipoCuenta tipoCuenta;
 
-
     @Column(name = "numero_cuenta", unique = true, length = 10)
     private String numeroCuenta;
 
     // "activa", "inactiva", "cancelada"
     @Enumerated(EnumType.STRING)
     private EstadoCuenta estado;
-
 
     @DecimalMin(value = "0.0", inclusive = false, message = "El saldo debe ser mayor a $0 para cuentas de ahorro")
     @Column(precision = 15, scale = 2)

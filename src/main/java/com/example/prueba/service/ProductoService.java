@@ -12,6 +12,4 @@ public interface ProductoService {
 
     ProductoEntity crearProducto(TipoCuenta tipoCuenta, BigDecimal saldo, Boolean exentaGMF, Long clienteId) throws ClienteNotFoundException;
     ProductoEntity updateFieldEnable(Long id, ProductoRequest productoRequest);
-
-
 }

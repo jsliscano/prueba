@@ -20,8 +20,6 @@ public class ClienteMapper {
         return  clienteEntity;
     }
 
-
-
     public static ClienteDtoResponse clienteEntityToClienClienteDtoResponse(String message, ClienteEntity cliente){
         return ClienteDtoResponse.
                 builder()
@@ -38,10 +36,4 @@ public class ClienteMapper {
                 )
                 .build();
     }
-
-
-
-
-
-
 }
