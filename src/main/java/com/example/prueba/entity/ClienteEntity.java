@@ -3,14 +3,20 @@ package com.example.prueba.entity;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 
-
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
+
 @Entity
 @Table(name= "clientes")
 
@@ -23,6 +29,7 @@ public class ClienteEntity {
     private String tipoIdentificacion;
 
     @Column (name = "numero_identificacion", unique = true, nullable = false)
+    @NotBlank(message = "El número de identificación no puede estar vacío")
     private String numeroIdentificacion;
 
     @NotBlank(message = "El nombre no puede estar vacío.")

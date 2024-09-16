@@ -37,7 +37,6 @@ public class ClienteController {
 
     }
 
-
     @PostMapping("/saveCliente")
     public Object save (@RequestBody ClienteDto clienteDto){
        return clienteService.save(clienteDto);
@@ -63,8 +62,6 @@ public class ClienteController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("An error occurred: " + e.getMessage());
         }
     }
-
-
 }
 
 

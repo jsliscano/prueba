@@ -16,7 +16,6 @@ public class ClienteDto {
 
     private String apellido;
 
-
     private String email;
 
     private LocalDate fechaNacimiento;

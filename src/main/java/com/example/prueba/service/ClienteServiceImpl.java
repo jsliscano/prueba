@@ -89,7 +89,7 @@ public class ClienteServiceImpl implements ClienteService {
 
     @Override
     public ClienteDtoResponse findByClienteNombre(String nombre) throws ClienteNotFoundException {
-        Optional<ClienteEntity> cliente = clienteRepository.findByClienteNombre(nombre);
+        Optional<ClienteEntity> cliente = clienteRepository.findByNombre(nombre);
 
         if (!cliente.isPresent()) {
             throw new ClienteNotFoundException("Cliente is not yupi");
@@ -108,7 +108,6 @@ public class ClienteServiceImpl implements ClienteService {
         }
         return ClienteMapper.clienteEntityToClienClienteDtoResponse("Exist client yupi", cliente.get());
     }
-
 
 }
 
