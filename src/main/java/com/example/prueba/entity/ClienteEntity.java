@@ -54,5 +54,6 @@ public class ClienteEntity {
 
     private LocalDateTime fechaModificacion;
 
+
 }
 

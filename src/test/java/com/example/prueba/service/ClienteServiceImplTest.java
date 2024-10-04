@@ -12,7 +12,9 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
 import java.time.LocalDate;
+import java.util.List;
 
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 
@@ -71,7 +73,6 @@ class ClienteServiceImplTest {
         // Assert comprueba que el método de pruebas ejecutado se comporta tal y como teníamos previsto que lo hiciera.
 
         assertEquals("No es mayor de edad",response);
-
 
     }
 }

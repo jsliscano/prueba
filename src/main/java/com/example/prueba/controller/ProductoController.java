@@ -21,7 +21,7 @@ public class ProductoController {
     ProductoService productoService;
 
     @PostMapping
-    public ResponseEntity<Object> crearproducto(@RequestBody ProductoDto productoDto) {
+    public ResponseEntity<Object> crearProducto(@RequestBody ProductoDto productoDto) {
         try {
             ProductoEntity producto = productoService.crearProducto(
                     productoDto.getTipoCuenta(),
@@ -29,15 +29,15 @@ public class ProductoController {
                     productoDto.getExentaGMF(),
                     productoDto.getClienteId()
             );
-            return ResponseEntity.ok(producto); // Retorna el producto creado con un código 200 OK
+            return ResponseEntity.ok(producto);
+
         } catch (IllegalArgumentException e) {
-            // Captura y maneja excepciones relacionadas con argumentos inválidos
             return ResponseEntity.badRequest().body(Map.of("error", e.getMessage()));
         } catch (ClienteNotFoundException e) {
-            // Captura y maneja el caso en el que el cliente no se encuentra
+
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(Map.of("error", e.getMessage()));
         } catch (Exception e) {
-            // Captura cualquier otra excepción inesperada
+
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(Map.of("error", "Error interno del servidor: " + e.getMessage()));
         }
     }

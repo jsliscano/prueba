@@ -49,7 +49,6 @@ public class ProductoEntity {
     @JoinColumn(name = "cliente_id", nullable = false)
     private ClienteEntity cliente;
 
-
 }
 
 
